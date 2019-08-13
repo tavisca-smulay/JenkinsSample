@@ -8,7 +8,7 @@ pipeline {
                 echo $JAVA_HOME
                  .\\gradlew.bat build
                 cd ..
-                @RD /S /Q JenkinsTest
+                @RD /S /Q JenkinsSample
                 '''
             }
         }
