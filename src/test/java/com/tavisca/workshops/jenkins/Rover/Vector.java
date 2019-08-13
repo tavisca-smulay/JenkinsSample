@@ -22,14 +22,14 @@ public class Vector {
         return new Vector(this.x, this.y, rightMap.get(this.direction));
     }
 
-    private static HashMap<Character, Character> leftMap = new HashMap<>() {{
+    private static HashMap<Character, Character> leftMap = new HashMap<Character, Character>() {{
         put('N', 'W');
         put('W', 'S');
         put('S', 'E');
         put('E', 'N');
     }};
 
-    private static HashMap<Character, Character> rightMap = new HashMap<>() {{
+    private static HashMap<Character, Character> rightMap = new HashMap<Character, Character>() {{
         put('N', 'E');
         put('W', 'N');
         put('S', 'W');
