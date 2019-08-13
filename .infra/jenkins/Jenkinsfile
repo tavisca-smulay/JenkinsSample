@@ -4,6 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh label: '', script: '''
+                chmod 777 ./gradlew
                 ./gradlew build
                 '''
             }
