@@ -1,21 +1,17 @@
 pipeline {
-    agent {label "machine"}
+    agent any
     stages {
         stage('Build') {
             steps {
-                bat label: '', script: '''
-                set JAVA_HOME="C:\\Program Files\\Java\\jdk-10"
-                echo $JAVA_HOME
+                sh label: '', script: '''
                  .\\gradlew.bat build
-                cd ..
-                @RD /S /Q JenkinsSample
                 '''
             }
         }
         stage('Test')
         {
             steps {
-                bat script: '''
+                sh script: '''
                     echo "I am in Test step"
                 ''',
             label: "Running Unit Test Cases"
@@ -24,7 +20,7 @@ pipeline {
         stage('Static Code Analysis')
         {
             steps {
-                bat script: '''
+                sh script: '''
                     echo "I am in Sonarqube scan"
                 ''',
             label: "Running Sonarqube Scan"
@@ -33,7 +29,7 @@ pipeline {
         stage('Build DockerImage')
         {
             steps {
-                bat script: '''
+                sh script: '''
                     echo "I am Building DockerImage ="
                 ''',
             label: "Building Docker Image"
@@ -42,7 +38,7 @@ pipeline {
         stage('Publish DockerImage')
         {
             steps {
-                bat script: '''
+                sh script: '''
                     echo "I am Publishing DockerImage ="
                 ''',
             label: "Publishing Docker Image"
