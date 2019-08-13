@@ -4,6 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh label: '', script: '''
+                echo "I am in Build step"
                 chmod 777 ./gradlew
                 ./gradlew build
                 '''
@@ -14,6 +15,8 @@ pipeline {
             steps {
                 sh script: '''
                     echo "I am in Test step"
+                    chmod 777 ./gradlew
+                    ./gradlew test
                 ''',
             label: "Running Unit Test Cases"
             }
