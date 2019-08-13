@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tavisca.workshops.jenkins.Rover.VectorTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2019-08-13T19:20:39" hostname="RENTLAPT007" time="0.082">
+  <properties/>
+  <testcase name="vectorCanMoveFromEast()" classname="com.tavisca.workshops.jenkins.Rover.VectorTest" time="0.041"/>
+  <testcase name="vectorCanMoveFromWest()" classname="com.tavisca.workshops.jenkins.Rover.VectorTest" time="0.001"/>
+  <testcase name="vectorCanMoveFromNorth()" classname="com.tavisca.workshops.jenkins.Rover.VectorTest" time="0.001"/>
+  <testcase name="vectorCanMoveFromSouth()" classname="com.tavisca.workshops.jenkins.Rover.VectorTest" time="0.001"/>
+  <testcase name="vectorCanRotateRightFromEast()" classname="com.tavisca.workshops.jenkins.Rover.VectorTest" time="0.001"/>
+  <testcase name="vectorCanRotateRightFromWest()" classname="com.tavisca.workshops.jenkins.Rover.VectorTest" time="0.003"/>
+  <testcase name="vectorCanRotateLeftFromEast()" classname="com.tavisca.workshops.jenkins.Rover.VectorTest" time="0.0"/>
+  <testcase name="vectorCanRotateLeftFromWest()" classname="com.tavisca.workshops.jenkins.Rover.VectorTest" time="0.001"/>
+  <testcase name="vectorCanRotateRightFromNorth()" classname="com.tavisca.workshops.jenkins.Rover.VectorTest" time="0.001"/>
+  <testcase name="vectorCanRotateRightFromSouth()" classname="com.tavisca.workshops.jenkins.Rover.VectorTest" time="0.003"/>
+  <testcase name="vectorCanRotateLeftFromNorth()" classname="com.tavisca.workshops.jenkins.Rover.VectorTest" time="0.003"/>
+  <testcase name="vectorCanRotateLeftFromSouth()" classname="com.tavisca.workshops.jenkins.Rover.VectorTest" time="0.001"/>
+  <testcase name="vectorInitializesWithGivenPosition()" classname="com.tavisca.workshops.jenkins.Rover.VectorTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

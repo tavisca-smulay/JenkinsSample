@@ -1,0 +1,58 @@
+pipeline {
+    agent {label "machine"}
+    stages {
+        stage('Build') {
+            steps {
+                bat label: '', script: '''
+                set JAVA_HOME="C:\\Program Files\\Java\\jdk-10"
+                echo $JAVA_HOME
+                 .\\gradlew.bat build
+                cd ..
+                @RD /S /Q JenkinsTest
+                '''
+            }
+        }
+        stage('Test')
+        {
+            steps {
+                bat script: '''
+                    echo "I am in Test step"
+                ''',
+            label: "Running Unit Test Cases"
+            }
+        }
+        stage('Static Code Analysis')
+        {
+            steps {
+                bat script: '''
+                    echo "I am in Sonarqube scan"
+                ''',
+            label: "Running Sonarqube Scan"
+            }
+        }
+        stage('Build DockerImage')
+        {
+            steps {
+                bat script: '''
+                    echo "I am Building DockerImage ="
+                ''',
+            label: "Building Docker Image"
+            }
+        }
+        stage('Publish DockerImage')
+        {
+            steps {
+                bat script: '''
+                    echo "I am Publishing DockerImage ="
+                ''',
+            label: "Publishing Docker Image"
+            }
+        }
+    }
+	post
+	{
+		always{
+			deleteDir()
+		}
+	}
+}
