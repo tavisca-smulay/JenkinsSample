@@ -7,6 +7,7 @@ public class Vector {
     public final int x;
     public final int y;
     public final char direction;
+    public Vector position;
 
     public Vector(int x, int y, char direction) {
         this.x = x;
@@ -20,6 +21,18 @@ public class Vector {
 
     public Vector turnRight() {
         return new Vector(this.x, this.y, rightMap.get(this.direction));
+    }
+
+    public int getPositionOfX() {
+        return this.x;
+    }
+
+    public int getPositionOfY() {
+        return this.y;
+    }
+
+    public char direction() {
+        return this.direction;
     }
 
     private static HashMap<Character, Character> leftMap = new HashMap<Character, Character>() {{
@@ -44,19 +57,21 @@ public class Vector {
         return coordinateValue-1;
     }
 
-    public Vector moveUp() {
-        return new Vector(this.x, incrementCoordinate(this.y), this.direction);
-    }
-
-    public Vector moveDown() {
-        return new Vector(this.x, decrementCoordinate(this.y), this.direction);
-    }
-
-    public Vector moveRight() {
-        return new Vector(incrementCoordinate(this.x), this.y, this.direction);
-    }
-
-    public Vector moveLeft() {
-        return new Vector(decrementCoordinate(this.x), this.y, this.direction);
+    public Vector moveForward() {
+        switch (this.direction){
+            case 'E':
+                position = new Vector(incrementCoordinate(this.x), this.y, this.direction);
+                break;
+            case 'W':
+                position = new Vector(decrementCoordinate(this.x), this.y, this.direction);
+                break;
+            case 'N':
+                position = new Vector(this.x, incrementCoordinate(this.y), this.direction);
+                break;
+            case 'S':
+                position = new Vector(this.x, decrementCoordinate(this.y), this.direction);
+                break;
+        }
+        return position;
     }
 }

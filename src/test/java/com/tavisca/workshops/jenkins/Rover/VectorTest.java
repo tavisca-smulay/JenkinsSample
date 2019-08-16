@@ -73,28 +73,28 @@ public class VectorTest {
     @Test
     void vectorCanMoveFromNorth(){
         Vector r = new Vector(10,10,'N');
-        Vector newVector = r.moveUp();
+        Vector newVector = r.moveForward();
         assertEquals(11,newVector.y);
     }
 
     @Test
     void vectorCanMoveFromEast(){
-        Vector r = new Vector(10,10,'N');
-        Vector newVector = r.moveRight();
+        Vector r = new Vector(10,10,'E');
+        Vector newVector = r.moveForward();
         assertEquals(11,newVector.x);
     }
 
     @Test
     void vectorCanMoveFromSouth(){
-        Vector r = new Vector(10,10,'N');
-        Vector newVector = r.moveDown();
+        Vector r = new Vector(10,10,'S');
+        Vector newVector = r.moveForward();
         assertEquals(9,newVector.y);
     }
 
     @Test
     void vectorCanMoveFromWest(){
-        Vector r = new Vector(10,10,'N');
-        Vector newVector = r.moveLeft();
+        Vector r = new Vector(10,10,'W');
+        Vector newVector = r.moveForward();
         assertEquals(9,newVector.x);
     }
 
