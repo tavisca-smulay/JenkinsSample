@@ -36,7 +36,7 @@ tasks.named<Test>("test") {
 }
 val jar by tasks.getting(Jar::class) {
     manifest {
-        attributes["Main-Class"] = "com.example.MainKt"
+        attributes["Main-Class"] = "com.tavisca.workshops.jenkins.Rover.RoverMain"
     }
 }
 
