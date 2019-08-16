@@ -35,7 +35,6 @@ pipeline {
             steps {
                 sh script: '''
                     echo "I am Building DockerImage"
-                    docker run -p 8026:8080 --name jenkins-with-docker getintodevops/jenkins-withdocker:lts
                     ./docker build . -t "mars_rover_image"
                     ./docker run "mars_rover_image"
                     echo "Done"
