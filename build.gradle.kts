@@ -34,6 +34,11 @@ tasks.named<Test>("test") {
         events("passed", "skipped", "failed")
     }
 }
+val jar by tasks.getting(Jar::class) {
+    manifest {
+        attributes["Main-Class"] = "com.example.MainKt"
+    }
+}
 
 tasks.named<Test>("hidden-tests") {
     useJUnitPlatform {
