@@ -33,7 +33,7 @@ pipeline {
             steps {
                 bat script: '''
                     echo "I am Building DockerImage ="
-                    docker build . -t "mars_rover_image_via_jenkins"
+                    docker build . -t "mars_rover"
                     echo "Done"
                 ''',
             label: "Building Docker Image"
