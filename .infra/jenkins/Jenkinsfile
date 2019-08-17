@@ -45,8 +45,8 @@ pipeline {
                 bat script: '''
                     echo "I am Publishing DockerImage ="
                     docker login -u=shivani08 -p=$Hivani08
-                    docker tag image_final shivani08/mars_rover
-                    docker push image_final
+                    docker tag mars_rover shivani08/image_final
+                    docker push shivani08/image_final
                 ''',
             label: "Publishing Docker Image"
             }
