@@ -11,7 +11,7 @@ public class RoverMain {
                 break;
             case "d": case "D":
                 System.out.println("(x, y) ->   ("+vector.getPositionOfX()+", "+vector.getPositionOfY()+")");
-                System.out.println("direction -> "+vector.direction());
+                System.out.println("direction -> "+vector.getDirection());
                 break;
             default: break;
         }

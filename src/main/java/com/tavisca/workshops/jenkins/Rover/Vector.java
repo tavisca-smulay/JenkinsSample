@@ -31,7 +31,7 @@ public class Vector {
         return this.y;
     }
 
-    public char direction() {
+    public char getDirection() {
         return this.direction;
     }
 
